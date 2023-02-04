@@ -64,10 +64,6 @@
 		font-family: Verdana, Geneva, sans-serif;
 	}
 
-	:global(a) {
-		color: #fff;
-	}
-
 	nav {
 		background-color: #a58608;
 		display: block;
