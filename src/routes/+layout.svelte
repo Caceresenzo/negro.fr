@@ -20,9 +20,9 @@
 				{ href: '/poles-de-competences/menuiseries-exterieures', text: 'Menuiseries extérieures' }
 			]
 		},
-		{ href: '/references', text: 'Références' },
-		{ href: '/recrutement', text: 'Recrutement' },
-		{ href: '/qualifications', text: 'Qualifications' },
+		// { href: '/references', text: 'Références' },
+		// { href: '/recrutement', text: 'Recrutement' },
+		// { href: '/qualifications', text: 'Qualifications' },
 		{
 			href: '/contact',
 			text: 'Contact',
