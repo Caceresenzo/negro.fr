@@ -16,7 +16,6 @@
 
 	main :global(*) {
 		color: #6f6f6f;
-		font-size: 14px;
 		line-height: 24px;
 	}
 

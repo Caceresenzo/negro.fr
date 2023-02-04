@@ -1,12 +1,11 @@
 <script lang="ts">
 	import Header from '$lib/Header.svelte';
 	import TwoColumnContent from '$lib/TwoColumnContent.svelte';
-
-	import banner from './banner.jpg';
+    import bannerNegro from "$lib/assets/banner-negro.jpg"
 </script>
 
 <Header words={["Bâtir ne s'improvise pas !"]} />
-<TwoColumnContent title="Qui sommes-nous ?" {banner}>
+<TwoColumnContent title="Qui sommes-nous ?" banner={bannerNegro}>
 	<div slot="left">
 		<p>
 			Créée en 1949 par Jean Negro, l'entreprise NEGRO était une entreprise de peinture. Elle se
