@@ -62,9 +62,4 @@
 	.link {
 		vertical-align: middle;
 	}
-
-	.link > a {
-		color: #ff6600;
-		text-decoration: none;
-	}
 </style>
