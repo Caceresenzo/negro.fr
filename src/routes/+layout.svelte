@@ -22,7 +22,7 @@
 		},
 		// { href: '/references', text: 'Références' },
 		// { href: '/recrutement', text: 'Recrutement' },
-		// { href: '/qualifications', text: 'Qualifications' },
+		{ href: '/qualifications', text: 'Qualifications' },
 		{
 			href: '/contact',
 			text: 'Contact',
