@@ -32,6 +32,7 @@
 	header {
 		margin: 0 auto;
 		width: 940px;
+		height: 120px;
 	}
 
 	.title {

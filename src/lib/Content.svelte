@@ -14,6 +14,12 @@
 		line-height: 24px;
 	}
 
+	main :global(*) {
+		color: #6f6f6f;
+		font-size: 14px;
+		line-height: 24px;
+	}
+
 	main :global(h1),
 	main :global(h1),
 	main :global(h2),
