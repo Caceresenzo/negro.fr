@@ -1,5 +1,4 @@
 <script lang="ts">
-	import logo from '$lib/assets/logo.png';
 	import Header from '$lib/Header.svelte';
 	import Content from '$lib/Content.svelte';
 </script>
