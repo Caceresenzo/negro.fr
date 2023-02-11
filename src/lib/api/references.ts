@@ -40,7 +40,7 @@ export const references = Object.freeze([
         slug: "villeneuve-le-roi",
         name: "Villeneuve le roi",
         category: Category.GENERAL_BUILDING_CONTRACTOR
-    }, { imageCount: 5 }),
+    }, { imageCount: 4 }),
     fromStatic({
         slug: "direction-des-services-fiscaux-vanves",
         name: "Direction des services fiscaux Vanves",
@@ -49,7 +49,7 @@ export const references = Object.freeze([
         description: "Réhabilitation du bâtiment tous corps d'états hors lots techniques.\nRestructuration d'un immeuble de bureaux.",
         cost: "1 030 131 € HT",
         category: Category.GENERAL_BUILDING_CONTRACTOR
-    }, { imageCount: 5 }),
+    }, { imageCount: 3 }),
     fromStatic({
         slug: "cic-paris",
         name: "CIC Paris",
@@ -58,7 +58,7 @@ export const references = Object.freeze([
         description: "Travaux de maçonnerie, plâtrerie, carrelage, faïence et revêtement marbre dans le cadre d'une restructuration de bureaux et de parties communes.",
         cost: "2 850 000 € HT",
         category: Category.GENERAL_BUILDING_CONTRACTOR
-    }, { imageCount: 8 }),
+    }, { imageCount: 7 }),
     fromStatic({
         slug: "immeuble-3",
         name: "Immeuble",
@@ -76,7 +76,7 @@ export const references = Object.freeze([
         description: "Travaux de bardages et de menuiserie, pose de brises soleil.",
         cost: "459 325 € HT",
         category: Category.EXTERIOR_WOOD_FURNISHINGS
-    }, { imageCount: 1 }),
+    }, { imageCount: 3 }),
     fromStatic({
         slug: "copropriete-du-23-avenue-marceau-75016-paris",
         name: "Copropriété du 23 avenue Marceau 75016 Paris",
@@ -85,7 +85,7 @@ export const references = Object.freeze([
         description: "Remplacement d'une facade rideau en aluminium avec châssis coulissants et vitrification de panneaux",
         cost: "225 551 € HT",
         category: Category.EXTERIOR_WOOD_FURNISHINGS
-    }, { imageCount: 5 }),
+    }, { imageCount: 4 }),
     fromStatic({
         slug: "base-aerienne-de-villacoublay",
         name: "Base Aérienne de Villacoublay",
@@ -93,7 +93,7 @@ export const references = Object.freeze([
         client: "Ministère de la Défense",
         description: "Rénovation d'un Bâtiment de Bureaux avec remplacement de 250  menuiseries par des menuiseries PVC avec Brises soleil extérieurs",
         category: Category.EXTERIOR_WOOD_FURNISHINGS
-    }, { imageCount: 5 }),
+    }, { imageCount: 6 }),
     fromStatic({
         slug: "ecole-st-simeon",
         name: "Ecole st Simeon",
@@ -103,24 +103,26 @@ export const references = Object.freeze([
         cost: "1 741 754 € HT",
         category: Category.EXTERIOR_WOOD_FURNISHINGS
     }, { imageCount: 3 }),
-    fromStatic({
+    {
         slug: "immeubles",
         name: "Immeubles",
         address: "17 à 25, rue de la Folie Regnault - 75011 Paris",
         client: "Régie Immobilière de la Ville de Paris",
         description: "Remplacement de 798 châssis PVC en rénovation dans les logements occupés.",
         cost: "403 201 € HT",
-        category: Category.EXTERIOR_WOOD_FURNISHINGS
-    }, { imageCount: 1, noThumbnail: true }),
-    fromStatic({
+        category: Category.EXTERIOR_WOOD_FURNISHINGS,
+        images: []
+    },
+    {
         slug: "hotel-des-impots",
         name: "Hôtel des Impôts",
         address: "6, rue Paganini - 75019 Paris",
         client: "Ministère des Finances",
         description: "Remplacement de 1098 châssis existants par des châssis en PVC.\nPose en rénovation.\nCompris mise en œuvre de stores d'occultation solaires.",
         cost: "1 304 023 € HT",
-        category: Category.EXTERIOR_WOOD_FURNISHINGS
-    }, { imageCount: 1, noThumbnail: true }),
+        category: Category.EXTERIOR_WOOD_FURNISHINGS,
+        images: []
+    },
     fromStatic({
         slug: "mac-mahon",
         name: "Mac Mahon",
@@ -129,7 +131,7 @@ export const references = Object.freeze([
         description: "Travaux de ravalement de la façade rue, et le remplacement des menuiseries extérieures sur façade rue et cour intérieure par des menuiseries en bois à l'ancienne.",
         cost: "601 358 € HT",
         category: Category.FACELIFT
-    }, { imageCount: 5 }),
+    }, { imageCount: 4 }),
     fromStatic({
         slug: "fondation-maginot",
         name: "Fondation Maginot",
@@ -138,25 +140,27 @@ export const references = Object.freeze([
         description: "Ravalement de la façade cour et rue.",
         cost: "68 125 € HT",
         category: Category.FACELIFT
-    }, { imageCount: 4 }),
-    fromStatic({
+    }, { imageCount: 3 }),
+    {
         slug: "immeuble-2",
         name: "Immeuble",
         address: "157, rue Lafayette 75010 - Paris",
         client: "Copropriété",
         description: "Ravalement d'un immeuble pierre et brique sur rue par hydrogommage et imperméabilisation I4 sur Cour.",
         cost: "88.151",
-        category: Category.FACELIFT
-    }, { imageCount: 1, noThumbnail: true }),
-    fromStatic({
+        category: Category.FACELIFT,
+        images: []
+    },
+    {
         slug: "agf-immobilier",
         name: "AGF Immobilier",
         address: "39, rue Pergolèse - 75016 Paris",
         client: "AGF Immobilier",
         description: "Ravalement d'un immeuble Haussmannien en pierre de taille par hydrogommage et réparation d'une lucarne pierre.",
         cost: "97 048 € HT",
-        category: Category.FACELIFT
-    }, { imageCount: 1, noThumbnail: true }),
+        category: Category.FACELIFT,
+        images: []
+    },
 ] as Array<Reference>)
 
 export const categories = Object.values(Category);

@@ -45,7 +45,9 @@
 	</div>
 	<div class="images">
 		{#each reference?.images || [] as image}
-			<img src={image.source} alt="" />
+			<a href={image.source}>
+				<img src={image.thumbnail || image.source} alt="" />
+			</a>
 		{/each}
 	</div>
 </div>
