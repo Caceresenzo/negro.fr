@@ -3,6 +3,10 @@
 	import Content from '$lib/Content.svelte';
 </script>
 
+<svelte:head>
+	<title>Coordonnées et Localisation de notre siège social</title>
+</svelte:head>
+
 <Header words={["Nous trouver, c'est facile !"]} />
 <Content>
 	<iframe

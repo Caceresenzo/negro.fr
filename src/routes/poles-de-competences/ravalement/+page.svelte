@@ -5,6 +5,10 @@
 	import banner from './banner.jpg';
 </script>
 
+<svelte:head>
+	<title>Ravalement - Traitement de façade - rénovation de façade</title>
+</svelte:head>
+
 <Header words={['Une façade à votre image.']} />
 <TwoColumnContent title="Ravalement" {banner}>
 	<div slot="left">

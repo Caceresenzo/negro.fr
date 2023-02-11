@@ -27,6 +27,10 @@
 	];
 </script>
 
+<svelte:head>
+	<title>Documentations commerciales</title>
+</svelte:head>
+
 <Header words={['Nous découvrir ...']} />
 <Content>
 	<img src={reference} alt="" />

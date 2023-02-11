@@ -4,6 +4,10 @@
     import bannerNegro from "$lib/assets/banner-negro.jpg"
 </script>
 
+<svelte:head>
+	<title>Notre histoire</title>
+</svelte:head>
+
 <Header words={["Bâtir ne s'improvise pas !"]} />
 <TwoColumnContent title="Qui sommes-nous ?" banner={bannerNegro}>
 	<div slot="left">

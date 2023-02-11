@@ -6,6 +6,10 @@
 	import qualibat2 from '$lib/assets/qualibat2.gif';
 </script>
 
+<svelte:head>
+	<title>Qualifications et Certification QUALIBAT et NF</title>
+</svelte:head>
+
 <Header words={['Respectons les règles !']} />
 <TwoColumnContent title="Qualifications" {banner}>
 	<div slot="left">

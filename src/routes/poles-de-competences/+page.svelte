@@ -5,6 +5,10 @@
 	import left from './left.jpg';
 </script>
 
+<svelte:head>
+	<title>3 pôle de compétences BTP</title>
+</svelte:head>
+
 <Header />
 <Content>
 	<div style="float:left">

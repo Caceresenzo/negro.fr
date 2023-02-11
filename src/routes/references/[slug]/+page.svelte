@@ -14,6 +14,10 @@
 	});
 </script>
 
+<svelte:head>
+	<title>{reference?.name}</title>
+</svelte:head>
+
 <div class="head">
 	<h3>{reference?.name}</h3>
 	{#if reference?.address}

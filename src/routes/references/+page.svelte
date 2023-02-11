@@ -4,6 +4,10 @@
 	$: references = getFeatured();
 </script>
 
+<svelte:head>
+	<title>Emplois Bâtiment</title>
+</svelte:head>
+
 <h2 class="title">Nos derniers ouvrages</h2>
 
 {#each references as reference}

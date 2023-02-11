@@ -3,6 +3,10 @@
 	import Content from '$lib/Content.svelte';
 </script>
 
+<svelte:head>
+	<title>Mentions Légales</title>
+</svelte:head>
+
 <Header words={['Mentions Légales']} />
 <Content>
 	<h3>1. Informations légales</h3>

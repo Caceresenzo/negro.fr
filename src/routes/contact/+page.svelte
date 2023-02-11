@@ -21,6 +21,10 @@
 	];
 </script>
 
+<svelte:head>
+	<title>Contactez-nous</title>
+</svelte:head>
+
 <Header words={["Nous contacter, c'est facile !"]} />
 <Content>
 	<img src={bannerNegro} alt="" />

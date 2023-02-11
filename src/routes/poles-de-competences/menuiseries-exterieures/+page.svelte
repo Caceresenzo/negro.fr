@@ -5,6 +5,10 @@
 	import banner from './banner.jpg';
 </script>
 
+<svelte:head>
+	<title>Fabrication de menuiseries extérieures, fenêtre, volet, porte, pvc, bois, aluminium, acier</title>
+</svelte:head>
+
 <Header words={['Isolation', 'Sécurité', 'Clareté']} />
 <TwoColumnContent title="Menuiseries extérieures" {banner}>
 	<div slot="left">
