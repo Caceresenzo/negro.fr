@@ -29,7 +29,9 @@
 		</li>
 	</ul>
 	<div class="content">
-		<slot />
+		<div class="card">
+			<slot />
+		</div>
 	</div>
 </Content>
 
@@ -76,5 +78,16 @@
 		line-height: 24px;
 		margin-right: 0px;
 		float: left;
+	}
+	
+	.card {
+		overflow: auto;
+		padding-left: 15px;
+		padding-right: 15px;
+		margin-top: 15px;
+		box-shadow: rgb(204 204 204) 0px 0px 5px;
+		border: 5px solid rgb(255, 255, 255);
+		left: -5px;
+		background: rgb(255, 255, 255);
 	}
 </style>

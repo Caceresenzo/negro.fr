@@ -8,62 +8,48 @@
 	$: reference = references.find(({ slug }) => slug === $page.params.slug);
 
 	onMount(() => {
-		console.log({ reference });
 		if (!reference) {
 			goto('/references');
 		}
 	});
 </script>
 
-<div class="card">
-	<div class="head">
-		<h3>{reference?.name}</h3>
-		{#if reference?.address}
-			<p>
-				<span class="key">Adresse : </span>
-				{reference?.address}
-			</p>
-		{/if}
-		{#if reference?.client}
-			<p>
-				<span class="key">Client : </span>
-				{reference?.client}
-			</p>
-		{/if}
-		{#if reference?.description}
-			<p>
-				<span class="key">Description : </span>
-				{reference?.description}
-			</p>
-		{/if}
-		{#if reference?.cost}
-			<p>
-				<span class="key">Montant du marché : </span>
-				{reference?.cost}
-			</p>
-		{/if}
-	</div>
-	<div class="images">
-		{#each reference?.images || [] as image}
-			<a href={image.source}>
-				<img src={image.thumbnail || image.source} alt="" />
-			</a>
-		{/each}
-	</div>
+<div class="head">
+	<h3>{reference?.name}</h3>
+	{#if reference?.address}
+		<p>
+			<span class="key">Adresse : </span>
+			{reference?.address}
+		</p>
+	{/if}
+	{#if reference?.client}
+		<p>
+			<span class="key">Client : </span>
+			{reference?.client}
+		</p>
+	{/if}
+	{#if reference?.description}
+		<p>
+			<span class="key">Description : </span>
+			{reference?.description}
+		</p>
+	{/if}
+	{#if reference?.cost}
+		<p>
+			<span class="key">Montant du marché : </span>
+			{reference?.cost}
+		</p>
+	{/if}
+</div>
+<div class="images">
+	{#each reference?.images || [] as image}
+		<a href={image.source}>
+			<img src={image.thumbnail || image.source} alt="" />
+		</a>
+	{/each}
 </div>
 
 <style>
-	.card {
-		overflow: auto;
-		padding-left: 15px;
-		padding-right: 15px;
-		margin-top: 15px;
-		box-shadow: rgb(204 204 204) 0px 0px 5px;
-		border: 5px solid rgb(255, 255, 255);
-		left: -5px;
-		background: rgb(255, 255, 255);
-	}
-
 	.head {
 		float: left;
 		width: 100%;

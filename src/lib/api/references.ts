@@ -12,12 +12,14 @@ export interface Image {
 export interface Reference {
     slug: string
     name: string
+    shortName?: string
     address?: string
     client?: string
     description?: string
     cost?: string
     category: Category
     images: Array<Image>
+    featuredOrder?: number
 }
 
 function fromStatic(reference: Omit<Reference, "images">, options: {
@@ -39,16 +41,19 @@ export const references = Object.freeze([
     fromStatic({
         slug: "villeneuve-le-roi",
         name: "Villeneuve le roi",
-        category: Category.GENERAL_BUILDING_CONTRACTOR
+        category: Category.GENERAL_BUILDING_CONTRACTOR,
+        featuredOrder: 2,
     }, { imageCount: 4 }),
     fromStatic({
         slug: "direction-des-services-fiscaux-vanves",
         name: "Direction des services fiscaux Vanves",
+        shortName: "Direction des svc. fiscaux Vanves",
         address: "58 boulevard du lycée - 92170 Vanves",
         client: "Direction des services fiscaux des hauts de seine sud",
         description: "Réhabilitation du bâtiment tous corps d'états hors lots techniques.\nRestructuration d'un immeuble de bureaux.",
         cost: "1 030 131 € HT",
-        category: Category.GENERAL_BUILDING_CONTRACTOR
+        category: Category.GENERAL_BUILDING_CONTRACTOR,
+        featuredOrder: 3,
     }, { imageCount: 3 }),
     fromStatic({
         slug: "cic-paris",
@@ -75,7 +80,8 @@ export const references = Object.freeze([
         client: "La poste",
         description: "Travaux de bardages et de menuiserie, pose de brises soleil.",
         cost: "459 325 € HT",
-        category: Category.EXTERIOR_WOOD_FURNISHINGS
+        category: Category.EXTERIOR_WOOD_FURNISHINGS,
+        featuredOrder: 1,
     }, { imageCount: 3 }),
     fromStatic({
         slug: "copropriete-du-23-avenue-marceau-75016-paris",
@@ -130,7 +136,8 @@ export const references = Object.freeze([
         client: "CARMF",
         description: "Travaux de ravalement de la façade rue, et le remplacement des menuiseries extérieures sur façade rue et cour intérieure par des menuiseries en bois à l'ancienne.",
         cost: "601 358 € HT",
-        category: Category.FACELIFT
+        category: Category.FACELIFT,
+        featuredOrder: 4,
     }, { imageCount: 4 }),
     fromStatic({
         slug: "fondation-maginot",
@@ -166,5 +173,12 @@ export const references = Object.freeze([
 export const categories = Object.values(Category);
 
 export function getReferencesByCategory(category: Category) {
-    return references.filter((reference) => reference.category === category)
+    return references
+        .filter((reference) => reference.category === category)
+}
+
+export function getFeatured() {
+    return references
+        .filter(({ featuredOrder }) => !!featuredOrder)
+        .sort(({ featuredOrder: a }, { featuredOrder: b }) => a! - b!)
 }
