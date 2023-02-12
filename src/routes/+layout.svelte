@@ -1,4 +1,5 @@
 <script>
+	import { dev } from '$app/environment';
 	import Link from './Link.svelte';
 
 	import downloadIcon from '$lib/assets/download-icon.png';
@@ -33,6 +34,9 @@
 		},
 		{ href: '/telechargements', icon: downloadIcon }
 	];
+
+	import { inject } from '@vercel/analytics';
+	inject({ mode: dev ? 'development' : 'production' });
 </script>
 
 <nav>
