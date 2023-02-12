@@ -20,6 +20,7 @@ export interface Reference {
     category: Category
     images: Array<Image>
     featuredOrder?: number
+    portfolioOrder?: number
 }
 
 function fromStatic(reference: Omit<Reference, "images">, options: {
@@ -43,6 +44,7 @@ export const references = Object.freeze([
         name: "Villeneuve le roi",
         category: Category.GENERAL_BUILDING_CONTRACTOR,
         featuredOrder: 2,
+        portfolioOrder: 2,
     }, { imageCount: 4 }),
     fromStatic({
         slug: "direction-des-services-fiscaux-vanves",
@@ -62,7 +64,8 @@ export const references = Object.freeze([
         client: "Crédit mutuel CIC",
         description: "Travaux de maçonnerie, plâtrerie, carrelage, faïence et revêtement marbre dans le cadre d'une restructuration de bureaux et de parties communes.",
         cost: "2 850 000 € HT",
-        category: Category.GENERAL_BUILDING_CONTRACTOR
+        category: Category.GENERAL_BUILDING_CONTRACTOR,
+        portfolioOrder: 8,
     }, { imageCount: 7 }),
     fromStatic({
         slug: "immeuble-3",
@@ -82,6 +85,7 @@ export const references = Object.freeze([
         cost: "459 325 € HT",
         category: Category.EXTERIOR_WOOD_FURNISHINGS,
         featuredOrder: 1,
+        portfolioOrder: 1,
     }, { imageCount: 3 }),
     fromStatic({
         slug: "copropriete-du-23-avenue-marceau-75016-paris",
@@ -90,7 +94,8 @@ export const references = Object.freeze([
         client: "SDC (syndicat de copropriétaires)",
         description: "Remplacement d'une facade rideau en aluminium avec châssis coulissants et vitrification de panneaux",
         cost: "225 551 € HT",
-        category: Category.EXTERIOR_WOOD_FURNISHINGS
+        category: Category.EXTERIOR_WOOD_FURNISHINGS,
+        portfolioOrder: 5,
     }, { imageCount: 4 }),
     fromStatic({
         slug: "base-aerienne-de-villacoublay",
@@ -98,7 +103,8 @@ export const references = Object.freeze([
         address: "78 Velizy Villacoublay",
         client: "Ministère de la Défense",
         description: "Rénovation d'un Bâtiment de Bureaux avec remplacement de 250  menuiseries par des menuiseries PVC avec Brises soleil extérieurs",
-        category: Category.EXTERIOR_WOOD_FURNISHINGS
+        category: Category.EXTERIOR_WOOD_FURNISHINGS,
+        portfolioOrder: 6,
     }, { imageCount: 6 }),
     fromStatic({
         slug: "ecole-st-simeon",
@@ -107,7 +113,8 @@ export const references = Object.freeze([
         client: "Ville d'Auxerre",
         description: "Traitement thermique de l'enveloppe avec Menuiseries Aluminium à rupture de pont thermique gamme de 70mm en ouvrant cadré et isolation par l'exterieur avec bardage composite TRESPA.\nTravaux de remplacement de garde corps\nInstallation d'un escalier de secours\nTravaux de Maçonnerie et de finitions Peinture",
         cost: "1 741 754 € HT",
-        category: Category.EXTERIOR_WOOD_FURNISHINGS
+        category: Category.EXTERIOR_WOOD_FURNISHINGS,
+        portfolioOrder: 7,
     }, { imageCount: 3 }),
     {
         slug: "immeubles",
@@ -138,6 +145,7 @@ export const references = Object.freeze([
         cost: "601 358 € HT",
         category: Category.FACELIFT,
         featuredOrder: 4,
+        portfolioOrder: 3,
     }, { imageCount: 4 }),
     fromStatic({
         slug: "fondation-maginot",
@@ -146,7 +154,8 @@ export const references = Object.freeze([
         client: "Fédération nationale André Maginot - FNAM",
         description: "Ravalement de la façade cour et rue.",
         cost: "68 125 € HT",
-        category: Category.FACELIFT
+        category: Category.FACELIFT,
+        portfolioOrder: 4,
     }, { imageCount: 3 }),
     {
         slug: "immeuble-2",
@@ -181,4 +190,10 @@ export function getFeatured() {
     return references
         .filter(({ featuredOrder }) => !!featuredOrder)
         .sort(({ featuredOrder: a }, { featuredOrder: b }) => a! - b!)
+}
+
+export function getPortfolio() {
+    return references
+        .filter(({ portfolioOrder }) => !!portfolioOrder)
+        .sort(({ portfolioOrder: a }, { portfolioOrder: b }) => a! - b!)
 }

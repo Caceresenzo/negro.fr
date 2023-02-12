@@ -3,7 +3,7 @@
 	import Content from '$lib/Content.svelte';
 	import banner from './banner.jpg';
 
-	import { categories, references, getReferencesByCategory } from '$lib/api/references';
+	import { categories, getReferencesByCategory } from '$lib/api/references';
 </script>
 
 <Header words={['Bâtir laisse des traces !']} />
